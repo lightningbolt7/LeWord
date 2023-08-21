@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./index.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="hero">
+            <div class="navigation">
+                <ul class="nav-contain">
+                    <li class="list-style " id="Analysis">
+                        Analysis
+                    </li>
+                    <li class="list-style active-list" id="Lander">
+                        Lander
+                    </li>
+                    <li class="list-style" id="Play">
+                        Play
+                    </li>
+                </ul> 
+            </div>
+        </div>
+
+        <div class="container" id="LanderMain">
+            <div class="header">
+                <h2 class="lander-text">Welcome to Wordle</h2>
+                <p class="lander-desc">Enriched with Analysis</p>
+            </div>
+
+            <div class="interact">
+                <div>
+                    <button class="interact-text" id="one">B</button>
+                </div>
+                <div>
+                    <button class="interact-text" id="two">O</button>
+                </div>
+                <div>
+                    <button class="interact-text" id="three">L</button>
+                </div>
+                <div>
+                    <button class="interact-text" id="four">T</button>
+                </div>
+                <div>
+                    <video class="interact-result" id="interact-result" src="./tick.mp4"  autoplay>   </video>
+                </div>
+
+            </div>
+            
+        </div>
+
+        <div class="container hidden" id="AnalysisMain">
+            <div class="containAnalysis">
+                <div id="AnalysisNames">
+                  
+                </div>
+                
+                <div class="AnalysisDetails">
+                    <div id="AnalysisHeader">
+                        
+                    </div>
+                    <div id="AnalysisDef"> 
+                       
+                    </div>
+                    <div id="AnalysisPoints">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="AnalysisAccuracy">
+                <div id="Accuracy" class="AccuracyTitle">Accuracy: </div>
+                <div id="AnalysiDescription" class="hidden">
+                    aoajpdiaoiacoiao
+                </div>
+            </div>
+        </div>
+
+        <div class="container hidden" id="PlayMain">
+            <div class="PlayDesign">
+                <div class="PlayAttempt">
+                    <div>
+                        <input onkeydown="checkAttempt(1,event,this.value,this)"  maxlength="4" type="text" class="attempt" id="attempt1" placeholder="Enter Word">
+                    </div>
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign colorOne" id="design11">
+                            <p id="word11" class="PlayLetterInnerLooks hideWord">B</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign colorTwo" id="design12">
+                            <p id="word12"class="PlayLetterInnerLooks hideWord">O</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign colorThree" id="design13">
+                            <p id="word13"class="PlayLetterInnerLooks hideWord">L</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign colorFour" id="design14">
+                            <p id="word14"class="PlayLetterInnerLooks hideWord">T</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="PlayAttempt">
+                    <div>
+                        <input onkeydown="checkAttempt(2,event,this.value,this)" maxlength="4" type="text" id="attempt2" class="attempt hideWord" placeholder="Enter Word">
+                    </div>
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design21">
+                            <p id="word21" class="PlayLetterInnerLooks hideWord">B</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design22">
+                            <p id="word22"class="PlayLetterInnerLooks hideWord">O</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design23">
+                            <p id="word23"class="PlayLetterInnerLooks hideWord">L</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design24">
+                            <p id="word24"class="PlayLetterInnerLooks hideWord">T</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="PlayAttempt">
+                    <div>
+                        <input onkeydown="checkAttempt(3,event,this.value,this)" maxlength="4" type="text" id="attempt3" class="attempt hideWord" placeholder="Enter Word">
+                    </div>
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design31">
+                            <p id="word31" class="PlayLetterInnerLooks hideWord">B</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design32">
+                            <p id="word32"class="PlayLetterInnerLooks hideWord">O</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design33">
+                            <p id="word33"class="PlayLetterInnerLooks hideWord">L</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design34">
+                            <p id="word34"class="PlayLetterInnerLooks hideWord">T</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="PlayAttempt">
+                    <div>
+                        <input onkeydown="checkAttempt(4,event,this.value,this)" maxlength="4" type="text" id="attempt4" class="attempt hideWord" placeholder="Enter Word">
+                    </div>
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design41">
+                            <p id="word41" class="PlayLetterInnerLooks hideWord">B</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design42">
+                            <p id="word42"class="PlayLetterInnerLooks hideWord">O</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design43">
+                            <p id="word43"class="PlayLetterInnerLooks hideWord">L</p>
+                        </div>
+                    </div>
+
+                    <div id="PlayWordDesign">
+                        <div class="PlayLetterDesign" id="design44">
+                            <p id="word44"class="PlayLetterInnerLooks hideWord">T</p>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="answerContent">
+                   
+                    <p id="answer">
+                        
+                    </p>
+                    <p id="meaning" class="">
+                        
+                    </p>
+                </div>
+
+                
+
+            </div>
+        
+        </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
